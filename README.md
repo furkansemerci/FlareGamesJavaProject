@@ -4,8 +4,8 @@
 FlareGamesv2 is a Java-based GUI application designed for managing a video game store's inventory, orders, and customer interactions. The project features an intuitive graphical interface built using `javax.swing` with multiple `JFrame` windows for streamlined user interaction.
 
 ## Features
-- **AddFrame**: Add new products to the store inventory.
-- **OrderFrame**: Process customer orders dynamically.
+- `AddFrame`: Add new products to the store inventory.
+- `OrderFrame`: Process customer orders dynamically.
 - Dynamic updates to inventory and order details.
 - Different product categories: Games, Consoles, and Accessories.
 - Supports product rental and second-hand product tracking.
@@ -15,6 +15,21 @@ FlareGamesv2 is a Java-based GUI application designed for managing a video game 
 - **GUI Framework**: Swing
 - **UML Design**: Comprehensive structure designed and implemented based on the provided UML diagram.
 
+
+## Architecture
+### Parent and Child Classes
+The application follows an **object-oriented architecture** with clear separation of responsibilities:
+- **Parent Class: `Product`**
+  - Represents a generic product with common attributes like ID, name, price, and quantity.
+- **Child Classes:**
+  - `GameProduct`: Represents video games with additional attributes specific to games.
+  - `ConsoleProduct`: Represents gaming consoles with relevant details.
+  - `AccessoryProduct`: Represents gaming accessories with tailored attributes.
+
+### System Class
+- **`FlareSys`**: Acts as the central system for managing the store's operations.
+  - Handles product inventory, customer orders, and system-wide operations.
+  - Provides utility methods for finding, adding, and removing products, as well as managing orders.
 ## GUI Windows
 ### AddFrame
 - Used for adding products to the inventory.
@@ -34,14 +49,15 @@ FlareGamesv2 is a Java-based GUI application designed for managing a video game 
   - A checkbox for rental preferences.
   - Dynamic inventory update after each order.
 
+### DisplayFrame
+  - Used for displaying all products in stock or all orders made by customers.
+  - Search field is used to search products according to their product id.
+
 ## How to Run
 ### Download the Application
-1. Visit the [Releases](https://github.com/username/FlareGamesv2/releases) page.
-2. Download the latest `.jar` file.
+  1. Ensure you have Java installed (JDK 8 or later).
+  2. Run FlareMain.java
 
-### Run the Application
-1. Ensure you have Java installed (JDK 8 or later).
-2. Open a terminal and navigate to the directory containing the `.jar` file.
-3. Run the application using:
-   ```bash
-   java -jar FlareGamesv2.jar
+## License
+  - This project is open source. 
+
